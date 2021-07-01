@@ -14,20 +14,17 @@
             const url= 'http://localhost:8080/division'
             var $button = $('#test-button');
             $button.click(function(){
-                const body = 
+                var body = 
                 {
-                    num1: 5,
-                    num2: 4
+                    "num1": 6,
+                    "num2": 4
                 }
-                fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: JSON.stringify(body)
-                }).then(function(response){
-                    alert(response.body);
+                
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    dataType: 'Json',
+                    data: body
                 })
             })
         })
