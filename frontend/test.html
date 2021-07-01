@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+
+            const url= 'http://localhost:8080/division'
+            var $button = $('#test-button');
+            $button.click(function(){
+                const body = 
+                {
+                    num1: 5,
+                    num2: 4
+                }
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: JSON.stringify(body)
+                }).then(function(response){
+                    alert(response.body);
+                })
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div id='main'>
+        <label>请输入：</label>
+        <input type="">
+        <div id='test'>success</div> 
+        <button id='test-button'>button</button>
+    </div>
+</body>
+</html>
