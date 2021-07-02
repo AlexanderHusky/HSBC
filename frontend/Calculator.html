@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSBC Simple Calculator</title>
+    <link rel='stylesheet' type='text/css' href='/frontend//Calculator.css'>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous">
+    </script>
+    <script  type="text/javascript" src="Calculator.js"></script>
+
+</head>
+<body>
+    <div id='main'>
+        <div id='main-title'>HSBC Simple Calculator</div>
+        <div id='main-screen'>This is result</div>
+        </form>
+        <div class="main-input">
+            <div id='main-numberInput'>
+                <form id='main-numberInput-form'>
+                    First number: <input type="text" name="num1" id='main-numberInput-num1'><br>
+                    Second number: <input type="text" name="num2" id='main-numberInput-num2'><br>
+                </form>
+            </div>
+            <div id='main-calculateMethod'>
+                <button id='main-calculateMethod-plus'>+</button>
+                <button id='main-calculateMethod-subtraction'>－</button>
+                <button id='main-calculateMethod-plus-multiplication'>×</button>
+                <button id='main-calculateMethod-division'>÷</button>
+            </div>
+        </div>
+        
+        <div id='submit'>
+            <button id='submit-submitButton'>Submit</button>
+        </div>
+        <div id='history-button'>
+            <button id='main-history'>history</button>
+            <button id='main-clear-history'>clear history</button>
+        </div>
+        
+        <div id='main-history-table'>
+            <ul id='main-history-table-list'></ul>
+        </div>
+    </div>
+</body>
+</html>

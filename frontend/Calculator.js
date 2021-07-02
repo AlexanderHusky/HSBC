@@ -3,6 +3,8 @@ $(document).ready(function () {
     var $plus = $('#main-calculateMethod-plus');
     var $multiplication = $('#main-calculateMethod-plus-multiplication');
     var $division = $('#main-calculateMethod-division');
+    var $history = $('#main-history');
+    var $history
 
     var url = ''
 
@@ -10,6 +12,7 @@ $(document).ready(function () {
     const url_multiply = 'http://localhost:8080/multiply';
     const url_division = 'http://localhost:8080/division';
     const url_plus = 'http://localhost:8080/sum';
+    const url_history = 'http://localhost:8080/history';
 
 
     $plus.click(function() {
@@ -26,6 +29,10 @@ $(document).ready(function () {
 
     $division.click(function() {
         url = url_division;
+    });
+
+    $history.click(function() {
+        clickHistoryButton();
     });
 
     function clickSubmitButton() {
@@ -54,5 +61,26 @@ $(document).ready(function () {
         $('#main-screen').text(result);
     }
 
+    function clickHistoryButton() {
+        $.ajax({
+            url: url_history,
+            type: 'GET',
+            success: function(data) {
+                $('ul li').remove();
+                for(var i=0;i<data.length;i++){
+                    $('#main-history-table-list').append('<li><a href="#">' + data[i] + '</a></li> ')
+                }
+            }
+        })
+    }
+
+    function clickClearHistoryButton() {
+        $('#main-clear-history').click(function() {
+            $('ul li').remove()
+        })
+    }
+
+    // carry out
     clickSubmitButton();
+    clickClearHistoryButton();
 })

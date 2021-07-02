@@ -1,0 +1,66 @@
+#main {
+    background-color: blanchedalmond;
+    border: 1px black solid;
+    width: 60%;
+    margin: auto;
+}
+
+#main-title {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+#main-screen {
+    text-align: center;
+    border: 1px solid gold;
+    width: 50%;
+    height: 50px;
+    font-size: 40px;
+    background: floralwhite;
+    margin: auto;
+}
+.main-input {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content:space-between;
+}
+
+#main-numberInput {
+    margin-top: 30px;
+}
+
+#main-numberInput-num1 {
+    float: right;
+}
+
+#main-calculateMethod {
+    margin-top: 30px;
+}
+
+#main-calculateMethod {
+    display: flex;
+    justify-content: space-around;
+}
+
+#submit {
+    margin: auto;
+    text-align: right;
+    width: 50%;
+    margin-top: 10px;
+}
+
+#history-button {
+    margin: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    width: 54%;
+    margin-top: 10px;
+}
