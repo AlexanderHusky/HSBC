@@ -4,7 +4,7 @@ const getExpresstion = (num1, num2, symbol, result) => {
 exports.getSumOfTwoNumber = (num1, num2) => {
     const result = num1 + num2;
     const expression = getExpresstion(num1, num2, '+', result)
-    this.list.push(num1 + '+' +num2 );
+    this.list.push(expression);
     return result.toFixed(2);
 }
 
