@@ -1,7 +1,7 @@
 const express = require('express');
-const fs = require('fs');
-const router = require('./controller/router');
-const service = require('./service/service');
+
+const router = require('./src/controller/router');
+const service = require('./src/service/service');
 const bodyParser = require('body-parser')
 const cors = require('cors');
 const app = express();
